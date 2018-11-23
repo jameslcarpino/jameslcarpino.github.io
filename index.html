@@ -45,9 +45,13 @@ section:last-child {
 <div id='map'></div>
 <div id='features'>
     <section id='welcome' class='active'>
-        <h3>Oakville, Connecticut, 1991-2009</h3>
-        <p>This is where it all began. My parents moved to Oakville in 1991, a few months after I was born, and I used Connecticut as a homebase for all of the places my life and career would bring me in the coming years. My hometown is where I developed an interest in the visual arts, specifically in video, photography, and editing the recordings of my friends skateboarding in the streets and a multitude of private businesses' parking lots.</p>
+        <h3>Welcome!/h3>
+        <p>Hello! You are now viewing my Resumap. With a lot of help, and some research, I created this map to help outline my resume in a new and fun way for people to see. It will span across the country from a small town in Connecticut and ending in a large city in Oregon. If you'd like more information please do not hesistate to reach out and email me at JamesLCarpino@gmail.com </p>
     </section>
+   <section id='section0' class='active'>
+        <h3>Oakville, CT 1991-2009</h3>
+        <p>This is where it all began. My parents moved to Oakville in 1991, a few months after I was born, and I used Connecticut as a homebase for all of the places my life and career would bring me in the coming years. My hometown is where I developed an interest in the visual arts, specifically in video, photography, and editing the recordings of my friends skateboarding in the streets and a multitude of private businesses' parking lots.</p>
+    </section>      
     <section id='section1' class='active'>
         <h3>Central Connecticut State University, 2009-2013</h3>
         <p>Central was where I realized I could take my hobby of working with video and transform it into a career. I started out as a Biology major, but was unfulfilled and decided to take an unthreatening class called, "Introduction to Visual Arts" and was hooked. I changed my major from biology to communication and dove into a world of media production, journalism, and video art. I graduated in 2013, and while I was in school began an internship at Captured Time Productions.</p>
@@ -104,79 +108,85 @@ var map = new mapboxgl.Map({
 var chapters = {
     'welcome': {
         bearing: 0,
-        center: [-73.07168, 41.59066],
-        zoom: 15.5,
+        center: [-90.108006, 33.364619],
+        zoom: 3.38,
         speed: 0.8,
-        pitch: 89
+        pitch: 25
     },
+    'section0':{
+        bearing: 0.00,
+        center: [-73.052862, 41.566729],
+        zoom: 10.84
+        pitch: 23.00
+    }
     'section1': {
         bearing: 0,
-        center: [-72.767265, 41.691460],
-        zoom: 15.00,
-        pitch: 20
+        center: [-72.729947, 41.671301],
+        zoom: 10.96,
+        pitch: 30
     },
     'section2': {
-        center: [-73.226576,41.770070],
-        bearing: 3,
-        zoom: 12.59,
+        center: [-73.226702, 41.763006],
+        bearing: 0,
+        zoom: 13.33,
         speed: 0.6,
         pitch: 40
     },
     'section3': {
         bearing: 12.80,
-        center: [-73.699142, 39.136193],
-        zoom: 4.68,
+        center: [-75.678190, 40.002264],
+        zoom: 4.62,
         speed: 0.6,
-        pitch: 28
+        pitch: 20
     },
     'section4': {
-        bearing: 60,
-        center: [-73.226576,41.770070],
-        zoom: 18,
+        bearing: 22.00,
+        center: [-73.237042, 41.774932],
+        zoom: 10.72,
         speed: 0.6,
-        pitch: 40
+        pitch: 20
     },
     'section5': {
-        bearing: 0,
-        center: [-74.130952, 44.707884],
-        zoom: 12.30,
-        pitch: 0,
+        bearing: 22.00,
+        center: [-74.209132, 44.707884],
+        zoom: 8.44,
+        pitch: 60.00,
         speed: 0.6
     },
     'section6': {
         bearing: 0,
-        center: [-72.870808, 51.51433123],
-        zoom: 7.33,
-        pitch: 25,
+        center: [-72.745856, 43.716291],
+        zoom: 7.39,
+        pitch: 30,
         speed: 0.6
     },
     'section7': {
-        bearing: -0,
-        center: [-73.226576,41.770070],
-        zoom: 18,
+        bearing: 0,
+        center: [-72.081954,43.089187],
+        zoom: 6.10,
         speed: 0.8,
-        pitch: 40
+        pitch: 0
     },
     'section8': {
         bearing: 0,
-        center: [-74.130952, 44.707884],
-        zoom: 12.3,
+        center: [-73.881798, 44.440952],
+        zoom: 7.33,
         speed: 0.8,
-        pitch: 20
+        pitch: 0
     },
     'section9': {
-        bearing: -0,
-        center: [-99.424660, 39.590037],
-        zoom: 3.84,
+        bearing: 0,
+        center: [-98.063326, 40.555683],
+        zoom: 3.81,
         speed: 0.8,
-        pitch: 40
+        pitch: 45
     },
     'section10': {
         bearing: -0,
-        center: [-122.674, 45.520],
-        zoom: 14.3,
+        center: [-122.657466, 45.497881],
+        zoom: 11.66,
         speed: 0.8,
-        pitch: 20
+        pitch: 45
     },
 };
 // On every scroll event, check which element is on screen

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Emojis for all</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js"></script>
+<style>
+body { margin: 0; padding: 0; }
+#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+</style>
+
+</head>
+<body>
+  <style>
+    #randomize{
+    display:block;
+    position: relative;
+    margin: 0px auto;
+    width: 50%;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+    background: #65d3ee
+
+    }
+    </style>
+<div id="map"></div>
+<button id="randomize">Choose me an emoji!</button>
+
+
+<script>
+
+
+    mapboxgl.accessToken ="pk.eyJ1IjoicHJhdGlreWFkYXYiLCJhIjoiY2sxd3FlMTdvMDFiNjNtbzNkMXRmbjFmaiJ9.LmtWDsU0_LuuZfWnlBe4gA"
+
+      var map = new mapboxgl.Map({
+        style: "mapbox://styles/pratikyadav/cl4yuwv6q000214pczf6x6ej3",
+        center: [-1.064, 5.74],
+        zoom: 1,
+        projection: 'globe',
+        container: "map",
+      });
+
+document.getElementById('randomize').addEventListener('click', () => {
+// Fly to a random location
+map.flyTo({
+center: [(Math.random() - 0.5) * 360, (Math.random() - 0.5) * 100],
+zoom: 5,
+essential: true // this animation is considered essential with respect to prefers-reduced-motion
+});
+})
+
+</script>
+
+</body>
+</html>
